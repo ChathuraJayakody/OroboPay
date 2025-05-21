@@ -31,7 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 24),
             Text(
               'Here are some things you can do',
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 17,
+                color: Colors.blueGrey
+              ),
             ),
             const SizedBox(height: 16),
             GridView.count(
@@ -40,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisCount: 2,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: 1.4,
+              childAspectRatio: 1.2,
               children: [
                 ActionCard(
                   label: 'Pay someone',
