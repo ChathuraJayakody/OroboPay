@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orobopay/Providers/settings_provider.dart';
 import 'package:orobopay/Widgets/balance_card.dart';
 import 'package:provider/provider.dart';
 
