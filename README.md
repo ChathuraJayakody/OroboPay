@@ -1,16 +1,47 @@
-# orobopay
+# OroboPay
 
-A new Flutter project.
+**OroboPay** is a **Flutter-based wallet dashboard UI** developed as part of a technical selection task. The goal of this project is to demonstrate clean UI architecture, modular widget design, and basic state management using `provider`.  
+> ⚠️ Note: This is a **static UI demo** — backend functionality and real-time data are **not** implemented.
 
-## Getting Started
+🔗 **GitHub Repository**: [https://github.com/ChathuraJayakody/OroboPay](https://github.com/ChathuraJayakody/OroboPay)
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Features (UI Only)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🔐 Wallet dashboard interface with currency balance
+- 🌍 Country flag and currency selector via dropdown
+- ⚡ Action cards: Pay Someone, Request Money, Buy Airtime, Pay Bill
+- 👥 Favorite users section with avatars and flags
+- 🧭 Bottom navigation bar with Material 3 components
+- 🌈 Fully responsive and styled using Material Design principles
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧠 State Management with Provider
+
+Used mainly for simple global state handling:
+
+- `NavigationProvider`: Manages the selected tab in the bottom navigation
+- `SettingsProvider`: Holds static user configuration (e.g., currency country)
+
+---
+
+## 🧩 Modular UI Components
+
+- `BalanceCard`: Displays the wallet balance and a currency dropdown
+- `ActionCard`: Reusable card showing different wallet actions
+- `FavoriteAvatar`: Circular avatars with optional flag and name
+- `BottomNavBar`: Material 3-style `NavigationBar` with reactive tab switching
+
+---
+
+## 🏗️ Project Structure
+
+```plaintext
+lib/
+├── models/              # Data models (e.g., Country)
+├── providers/           # State providers for settings/navigation
+├── screens/             # HomeScreen and other main views
+├── widgets/             # Reusable widgets (BalanceCard, ActionCard, etc.)
+└── main.dart            # App entry point
