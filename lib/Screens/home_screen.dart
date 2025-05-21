@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orobopay/Providers/settings_provider.dart';
 import 'package:orobopay/Widgets/action_card.dart';
 import 'package:orobopay/Widgets/balance_card.dart';
+import 'package:orobopay/Widgets/favorite_avatar.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +15,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-
     final settings = context.watch<SettingsProvider>();
 
     final homeBody = SafeArea(
@@ -77,13 +77,49 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            const SizedBox(height: 24),
+            Text(
+              'Your favorite people',
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+            const SizedBox(height: 12),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  FavoriteAvatar(
+                    icon: Icons.add,
+                    label: 'Add',
+                    countryFlag: null,
+                    onTap: () {
+                      // Handle Add Favorite
+                    },
+                  ),
+                  const SizedBox(width: 16),
+                  FavoriteAvatar(
+                    imageUrl: 'https://i.pravatar.cc/150?img=32',
+                    label: 'Grace L.',
+                    countryFlag: 'assets/flags/gh.png',
+                    onTap: () {
+                      // Handle Grace L.
+                    },
+                  ),
+                  const SizedBox(width: 16),
+                  FavoriteAvatar(
+                    label: 'Lawrence A.',
+                    countryFlag: 'assets/flags/gh.png',
+                    onTap: () {
+                      // Handle Lawrence A.
+                    },
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
 
-    return Scaffold(
-
-    );
+    return Scaffold();
   }
 }
