@@ -31,9 +31,16 @@ class ActionCard extends StatelessWidget {
           children: [
             Icon(icon, size: 32),
             const SizedBox(height: 12),
-            Text(label, style: Theme.of(context).textTheme.titleMedium),
+            Text(label, style: TextStyle(
+              fontWeight: FontWeight.w800,
+              fontSize: 16
+            )),
             const SizedBox(height: 4),
-            Text(description, style: Theme.of(context).textTheme.bodySmall),
+            Text(description, style: TextStyle(
+              color: Colors.blueGrey,
+              fontSize: 13,
+              fontWeight: FontWeight.w600
+            )),
           ],
         ),
       ),

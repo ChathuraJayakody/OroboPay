@@ -31,7 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 24),
             Text(
               'Here are some things you can do',
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 17,
+                color: Colors.blueGrey
+              ),
             ),
             const SizedBox(height: 16),
             GridView.count(
@@ -40,12 +44,12 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisCount: 2,
               mainAxisSpacing: 12,
               crossAxisSpacing: 12,
-              childAspectRatio: 1.4,
+              childAspectRatio: 1.2,
               children: [
                 ActionCard(
                   label: 'Pay someone',
                   description: 'To wallet, bank or mobile number',
-                  icon: Icons.arrow_forward,
+                  icon: Icons.tap_and_play_outlined,
                   background: const Color(0xFFF2EEFF),
                   onTap: () {
                     // Handle Pay Someone action
@@ -54,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ActionCard(
                   label: 'Request money',
                   description: 'Request money from OroboPay users',
-                  icon: Icons.note_add_outlined,
+                  icon: Icons.request_quote_outlined,
                   background: const Color(0xFFEAFAF1),
                   onTap: () {
                     // Handle Request Money action
@@ -72,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ActionCard(
                   label: 'Pay bill',
                   description: 'Zero transaction fees when you pay',
-                  icon: Icons.receipt_long_outlined,
+                  icon: Icons.payment_outlined,
                   background: const Color(0xFFF4F4F4),
                   onTap: () {
                     // Handle Pay Bill action
@@ -83,7 +87,11 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 24),
             Text(
               'Your favorite people',
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 17,
+                color: Colors.blueGrey
+              ),
             ),
             const SizedBox(height: 12),
             SingleChildScrollView(
