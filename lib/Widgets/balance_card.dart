@@ -7,12 +7,12 @@ class BalanceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = Theme.of(context).colorScheme;
+    // final color = Colors.lightBlueAccent;
 
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.only(left: 5),
       decoration: BoxDecoration(
-        color: color.primaryContainer,
+        // color: color,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -23,7 +23,10 @@ class BalanceCard extends StatelessWidget {
             children: [
               Text(
                 '1,234.00',
-                style: Theme.of(context).textTheme.headlineMedium,
+                style: 
+                TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w900),
               ),
               const SizedBox(height: 4),
               Row(
@@ -41,8 +44,8 @@ class BalanceCard extends StatelessWidget {
                     value: country.code,
                     underline: const SizedBox.shrink(),
                     items: const [
-                      DropdownMenuItem(value: 'GH', child: Text('GHS')),
-                      DropdownMenuItem(value: 'US', child: Text('USD')),
+                      DropdownMenuItem(value: 'GH', child: Text('GHS',style: TextStyle(color: Colors.blueGrey),)),
+                      DropdownMenuItem(value: 'US', child: Text('USD', style: TextStyle(color: Colors.blueGrey),)),
                     ],
                     onChanged: (_) {},
                   ),
