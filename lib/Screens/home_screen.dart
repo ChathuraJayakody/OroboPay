@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 44),
             Text(
               'Your favorite people',
               style: TextStyle(
@@ -93,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.blueGrey
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 22),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -140,23 +140,29 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('Hi Ehi,', style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                  color: Colors.blueGrey
-                ),),
+        title: Padding(
+          padding: const EdgeInsets.only(left: 12),
+          child: Text('Hi Ehi,', style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                    color: Colors.blueGrey
+                  ),),
+        ),
         actions: [
           Stack(
             children: [
-              IconButton(
-                icon: Icon(Icons.notifications_outlined),
-                iconSize: 38,
-                onPressed: () {
-                  // Handle Notification Tap
-                },
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: IconButton(
+                  icon: Icon(Icons.notifications_outlined),
+                  iconSize: 38,
+                  onPressed: () {
+                    // Handle Notification Tap
+                  },
+                ),
               ),
               Positioned(
-                right: 14,
+                right: 24,
                 top: 14,
                 child: Container(
                   width: 12,

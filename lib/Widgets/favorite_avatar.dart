@@ -29,7 +29,7 @@ class FavoriteAvatar extends StatelessWidget {
                 radius: 38,
                 backgroundColor: Colors.blue.shade100,
                 backgroundImage:
-                    assetImagePath != null ? NetworkImage(assetImagePath!) : null,
+                    assetImagePath != null ? AssetImage(assetImagePath!) : null,
                 child:
                     icon != null && assetImagePath == null
                         ? Icon(icon, size: 38, color: Colors.grey.shade600)
@@ -65,8 +65,11 @@ class FavoriteAvatar extends StatelessWidget {
                 ),
             ],
           ),
-          const SizedBox(height: 8),
-          Text(label, style: Theme.of(context).textTheme.bodySmall),
+          const SizedBox(height: 9),
+          Text(label, style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 13
+          )),
         ],
       ),
     );
