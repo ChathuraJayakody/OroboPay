@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:orobopay/Providers/settings_provider.dart';
-import 'package:orobopay/Widgets/action_card.dart';
-import 'package:orobopay/Widgets/balance_card.dart';
-import 'package:orobopay/Widgets/bottom_nav_bar.dart';
-import 'package:orobopay/Widgets/favorite_avatar.dart';
 import 'package:provider/provider.dart';
+import '../widgets/bottom_nav_bar.dart';
+import '../widgets/balance_card.dart';
+import '../widgets/action_card.dart';
+import '../widgets/favorite_avatar.dart';
+import '../providers/settings_provider.dart';
+import '../providers/navigation_provider.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -16,6 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final navProv = context.watch<NavigationProvider>();
     final settings = context.watch<SettingsProvider>();
 
     final homeBody = SafeArea(
@@ -123,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     final screens = [
       homeBody,
-      //this is to add the rest of the screens like wallet,scan,profiel and more
+      // This is to add the rest of the screens like wallet,scan,profiel and more
     ];
 
     return Scaffold(
@@ -156,6 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      body: screens[navProv.currentIndex],
       bottomNavigationBar: const BottomNavBar(),
     );
   }
