@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(width: 16),
                   FavoriteAvatar(
-                    imageUrl: 'https://i.pravatar.cc/150?img=32',
+                    assetImagePath: 'assets/images/user.jpg',//Here, can add a networkimage by giving the imageurl.it it more effificient when connecting to the database 
                     label: 'Grace L.',
                     countryFlag: 'assets/flags/gh.png',
                     onTap: () {

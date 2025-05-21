@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class FavoriteAvatar extends StatelessWidget {
   final String label;
-  final String? imageUrl;
+  final String? assetImagePath;
   final IconData? icon;
   final String? countryFlag;
   final VoidCallback? onTap;
@@ -10,7 +10,7 @@ class FavoriteAvatar extends StatelessWidget {
   const FavoriteAvatar({
     Key? key,
     required this.label,
-    this.imageUrl,
+    this.assetImagePath,
     this.icon,
     this.countryFlag,
     this.onTap,
@@ -29,11 +29,11 @@ class FavoriteAvatar extends StatelessWidget {
                 radius: 38,
                 backgroundColor: Colors.blue.shade100,
                 backgroundImage:
-                    imageUrl != null ? NetworkImage(imageUrl!) : null,
+                    assetImagePath != null ? NetworkImage(assetImagePath!) : null,
                 child:
-                    icon != null && imageUrl == null
+                    icon != null && assetImagePath == null
                         ? Icon(icon, size: 38, color: Colors.grey.shade600)
-                        : imageUrl == null && label.isNotEmpty
+                        : assetImagePath == null && label.isNotEmpty
                         ? Text(
                           label
                               .split(' ')
