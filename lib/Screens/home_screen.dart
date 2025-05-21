@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orobopay/Providers/settings_provider.dart';
 import 'package:orobopay/Widgets/action_card.dart';
 import 'package:orobopay/Widgets/balance_card.dart';
+import 'package:orobopay/Widgets/bottom_nav_bar.dart';
 import 'package:orobopay/Widgets/favorite_avatar.dart';
 import 'package:provider/provider.dart';
 
@@ -120,6 +121,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
 
+    final screens = [
+      homeBody,
+      //this is to add the rest of the screens like wallet,scan,profiel and more
+    ];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -150,6 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
