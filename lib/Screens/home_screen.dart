@@ -87,7 +87,11 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 24),
             Text(
               'Your favorite people',
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 17,
+                color: Colors.blueGrey
+              ),
             ),
             const SizedBox(height: 12),
             SingleChildScrollView(
