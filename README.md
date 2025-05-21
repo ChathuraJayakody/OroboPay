@@ -9,7 +9,6 @@
 
 ![OroboPay Dashboard UI](assets/images/dashboard_ui.png)
 
-🔗 **GitHub Repository**: [https://github.com/ChathuraJayakody/OroboPay](https://github.com/ChathuraJayakody/OroboPay)
 
 ## 📱 Features (UI Only)
 
