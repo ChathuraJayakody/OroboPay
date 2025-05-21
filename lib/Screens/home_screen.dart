@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orobopay/Widgets/balance_card.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
 
+    final settings = context.watch<SettingsProvider>();
 
     final homeBody = SafeArea(
       child: Padding(
