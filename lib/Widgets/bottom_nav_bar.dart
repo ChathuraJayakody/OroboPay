@@ -1,5 +1,5 @@
-// lib/widgets/bottom_nav_bar.dart
 import 'package:flutter/material.dart';
+import 'package:orobopay/providers/navigation_provider.dart';
 import 'package:provider/provider.dart';
 
 class BottomNavBar extends StatelessWidget {
