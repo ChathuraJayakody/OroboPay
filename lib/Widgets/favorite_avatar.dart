@@ -29,7 +29,9 @@ class FavoriteAvatar extends StatelessWidget {
                 radius: 38,
                 backgroundColor: Colors.blue.shade100,
                 backgroundImage:
-                    assetImagePath != null ? NetworkImage(assetImagePath!) : null,
+                    assetImagePath != null
+                        ? AssetImage(assetImagePath!)
+                        : null,
                 child:
                     icon != null && assetImagePath == null
                         ? Icon(icon, size: 38, color: Colors.grey.shade600)
@@ -53,13 +55,15 @@ class FavoriteAvatar extends StatelessWidget {
                   bottom: -2,
                   right: -2,
                   child: CircleAvatar(
-                    radius: 10,
+                    radius: 12,
                     backgroundColor: Colors.white,
-                    child: Image.asset(
-                      countryFlag!,
-                      width: 16,
-                      height: 16,
-                      fit: BoxFit.cover,
+                    child: ClipOval(
+                      child: Image.asset(
+                        countryFlag!,
+                        width: 20,
+                        height: 20,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
