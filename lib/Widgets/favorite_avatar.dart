@@ -26,16 +26,26 @@ class FavoriteAvatar extends StatelessWidget {
             clipBehavior: Clip.none,
             children: [
               CircleAvatar(
-                radius: 28,
-                backgroundColor: Colors.grey.shade200,
-                backgroundImage: imageUrl != null ? NetworkImage(imageUrl!) : null,
-                child: icon != null && imageUrl == null
-                    ? Icon(icon, size: 28)
-                    : imageUrl == null && label.isNotEmpty
+                radius: 38,
+                backgroundColor: Colors.blue.shade100,
+                backgroundImage:
+                    imageUrl != null ? NetworkImage(imageUrl!) : null,
+                child:
+                    icon != null && imageUrl == null
+                        ? Icon(icon, size: 38, color: Colors.grey.shade600)
+                        : imageUrl == null && label.isNotEmpty
                         ? Text(
-                            label[0],
-                            style: Theme.of(context).textTheme.titleLarge,
-                          )
+                          label
+                              .split(' ')
+                              .map((word) => word[0])
+                              .take(2)
+                              .join()
+                              .toUpperCase(),
+                          style: const TextStyle(
+                            fontSize: 24,
+                            color: Colors.white,
+                          ),
+                        )
                         : null,
               ),
               if (countryFlag != null)
