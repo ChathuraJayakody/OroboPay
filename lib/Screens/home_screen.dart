@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ActionCard(
                   label: 'Pay someone',
                   description: 'To wallet, bank or mobile number',
-                  icon: Icons.arrow_forward,
+                  icon: Icons.tap_and_play_outlined,
                   background: const Color(0xFFF2EEFF),
                   onTap: () {
                     // Handle Pay Someone action
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ActionCard(
                   label: 'Request money',
                   description: 'Request money from OroboPay users',
-                  icon: Icons.note_add_outlined,
+                  icon: Icons.request_quote_outlined,
                   background: const Color(0xFFEAFAF1),
                   onTap: () {
                     // Handle Request Money action
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ActionCard(
                   label: 'Pay bill',
                   description: 'Zero transaction fees when you pay',
-                  icon: Icons.receipt_long_outlined,
+                  icon: Icons.payment_outlined,
                   background: const Color(0xFFF4F4F4),
                   onTap: () {
                     // Handle Pay Bill action
