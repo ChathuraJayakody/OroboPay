@@ -132,22 +132,27 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('Hi Ehi,', style: Theme.of(context).textTheme.titleMedium),
+        title: Text('Hi Ehi,', style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                  color: Colors.blueGrey
+                ),),
         actions: [
           Stack(
             children: [
               IconButton(
                 icon: Icon(Icons.notifications_outlined),
+                iconSize: 38,
                 onPressed: () {
                   // Handle Notification Tap
                 },
               ),
               Positioned(
-                right: 12,
-                top: 12,
+                right: 14,
+                top: 14,
                 child: Container(
-                  width: 8,
-                  height: 8,
+                  width: 12,
+                  height: 12,
                   decoration: BoxDecoration(
                     color: Colors.red,
                     shape: BoxShape.circle,
